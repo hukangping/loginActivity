@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">LoginActivity</string>
+    <string name="user">用户</string>
+    <string name="to_use">To Use</string>
+    <string name="welcome">Welcome</string>
+    <string name="psw">密码</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="user_hint">Account cannot be empty</string>
+    <string name="psw_hint">Password cannot be empty</string>
+    <string name="username_hint">请输入账号</string>
+    <string name="psw1_hint">请输入密码</string>
+    <string name="tv_Following">Following</string>
+</resources>

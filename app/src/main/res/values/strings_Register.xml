@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user1">username:</string>
+    <string name="psw1">password:</string>
+    <string name="user1Hint">请输入用户名</string>
+    <string name="psw1Hint">请输入您的密码</string>
+</resources>
