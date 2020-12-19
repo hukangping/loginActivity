@@ -47,17 +47,17 @@ public class RegisterActivity extends AppCompatActivity {
                 if (!("".equals(etUsername.getText().toString().trim())) && !("".equals(etPsw.getText().toString().trim()))) {
                     //如果不为空获取SharedPreference对象生成xml文件
                     sp = getSharedPreferences("UserLogin", Context.MODE_PRIVATE);
-                    Map<String, ?> userLogin= sp.getAll();
-                    if(!(userLogin.containsKey(etUsername.getText().toString().trim()))){
+                    Map<String, ?> userLogin = sp.getAll();
+                    if (!(userLogin.containsKey(etUsername.getText().toString().trim()))) {
                         SharedPreferences.Editor edit = sp.edit();
                         edit.putString(etUsername.getText().toString().trim(), etPsw.getText().toString());
                         edit.apply();//提交数据到xml文件中
                         Toast.makeText(RegisterActivity.this, "注册成功！", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                         startActivity(intent);
-                    }else{
+                    } else {
                         Toast.makeText(RegisterActivity.this, "用户名已存在！", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegisterActivity.this,RegisterActivity.class);
+                        Intent intent = new Intent(RegisterActivity.this, RegisterActivity.class);
                         startActivity(intent);
                         finish();
                     }

@@ -1,24 +1,19 @@
 package com.example.loginactivity;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Instrumentation;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.Iterator;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -64,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                     Object value = userLogin.get(etUser.getText().toString().trim());
                     if (value.toString().equals(etPsw.getText().toString())) {
                         Toast.makeText(MainActivity.this, "登录成功！", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+                        Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
                         intent.putExtra("data", etUser.getText().toString().trim());
                         startActivity(intent);
                     } else {
